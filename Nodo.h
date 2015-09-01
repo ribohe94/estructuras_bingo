@@ -4,37 +4,41 @@
  *
  * Created on 29 August 2015, 23:31
  */
-
 #ifndef NODO_H
 #define	NODO_H
+
+#include <iostream>
+
+using namespace std;
 
 class Nodo {
 public:
     Nodo();
+    Nodo(Nodo* abajo, Nodo* arriba, Nodo* derecha, Nodo* izquierda, Nodo* ne, Nodo* no, int posicionX, int posicionY, Nodo* se, Nodo* so, int valor);
     Nodo(const Nodo& orig);
-    Nodo(int);
+    Nodo(int posicionX, int posicionY, int valor);
     virtual ~Nodo();
     //Sets & Gets
-    Nodo GetAbajo() const;
-    void SetAbajo(Nodo abajo);
-    Nodo GetArriba() const;
-    void SetArriba(Nodo arriba);
-    Nodo GetDerecha() const;
-    void SetDerecha(Nodo derecha);
-    Nodo GetIzquierda() const;
-    void SetIzquierda(Nodo izquierda);
-    Nodo GetNe() const;
-    void SetNe(Nodo ne);
-    Nodo GetNo() const;
-    void SetNo(Nodo no);
+    Nodo* GetAbajo() const;
+    void SetAbajo(Nodo* abajo);
+    Nodo* GetArriba() const;
+    void SetArriba(Nodo* arriba);
+    Nodo* GetDerecha() const;
+    void SetDerecha(Nodo* derecha);
+    Nodo* GetIzquierda() const;
+    void SetIzquierda(Nodo* izquierda);
+    Nodo* GetNe() const;
+    void SetNe(Nodo* ne);
+    Nodo* GetNo() const;
+    void SetNo(Nodo* no);
     int GetPosicionX() const;
     void SetPosicionX(int posicionX);
     int GetPosicionY() const;
     void SetPosicionY(int posicionY);
-    Nodo GetSe() const;
-    void SetSe(Nodo se);
-    Nodo GetSo() const;
-    void SetSo(Nodo so);
+    Nodo* GetSe() const;
+    void SetSe(Nodo* se);
+    Nodo* GetSo() const;
+    void SetSo(Nodo* so);
     int GetValor() const;
     void SetValor(int valor);
 
@@ -43,14 +47,14 @@ private:
     int valor;
     int posicionX;
     int posicionY;
-    Nodo izquierda;
-    Nodo derecha;
-    Nodo arriba;
-    Nodo abajo;
-    Nodo no;
-    Nodo ne;
-    Nodo so;
-    Nodo se;
+    Nodo* izquierda;
+    Nodo* derecha;
+    Nodo* arriba;
+    Nodo* abajo;
+    Nodo* no;
+    Nodo* ne;
+    Nodo* so;
+    Nodo* se;
     
 };
 

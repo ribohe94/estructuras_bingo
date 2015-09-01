@@ -12,11 +12,24 @@
 
 class Lista {
 public:
+    
     Lista();
     Lista(const Lista& orig);
     virtual ~Lista();
+    
+    //Metodos
+    
+    bool estaVacio();
+    void mostrarLista();
+    void generarBingo();
+    void agregarNumero(Nodo* nuevoNodo);
+    Nodo obtenerPosicion(int, int);
+    
+    //Atributos
+    static const int TAMANO_BINGO = 5;
 private:
-    int tamano;
+    Nodo* primero;
+    Nodo* ultimo;
 };
 
 #endif	/* LISTA_H */

@@ -7,6 +7,8 @@
 
 #include <cstdlib>
 
+#include "Lista.h"
+
 using namespace std;
 
 /*
@@ -14,6 +16,10 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    Lista* l1 = new Lista();
+    l1->generarBingo();
+    l1->mostrarLista();
+    
     return 0;
 }
 

@@ -10,11 +10,15 @@
 Nodo::Nodo() {
 }
 
-Nodo::Nodo(const Nodo& orig) {
+Nodo::Nodo(Nodo* abajo, Nodo* arriba, Nodo* derecha, Nodo* izquierda, Nodo* ne, Nodo* no, int posicionX, int posicionY, Nodo* se, Nodo* so, int valor) :
+abajo(abajo), arriba(arriba), derecha(derecha), izquierda(izquierda), ne(ne), no(no), posicionX(posicionX), posicionY(posicionY), se(se), so(so), valor(valor) {
 }
 
-Nodo::Nodo(int valor) {
-    this->valor = valor;
+Nodo::Nodo(int posicionX, int posicionY, int valor) :
+posicionX(posicionX), posicionY(posicionY), valor(valor) {
+}
+
+Nodo::Nodo(const Nodo& orig) {
 }
 
 Nodo::~Nodo() {
@@ -22,51 +26,51 @@ Nodo::~Nodo() {
 
 //Sets & Gets
 
-Nodo Nodo::GetAbajo() const {
+Nodo* Nodo::GetAbajo() const {
     return abajo;
 }
 
-void Nodo::SetAbajo(Nodo abajo) {
+void Nodo::SetAbajo(Nodo* abajo) {
     this->abajo = abajo;
 }
 
-Nodo Nodo::GetArriba() const {
+Nodo* Nodo::GetArriba() const {
     return arriba;
 }
 
-void Nodo::SetArriba(Nodo arriba) {
+void Nodo::SetArriba(Nodo* arriba) {
     this->arriba = arriba;
 }
 
-Nodo Nodo::GetDerecha() const {
+Nodo* Nodo::GetDerecha() const {
     return derecha;
 }
 
-void Nodo::SetDerecha(Nodo derecha) {
+void Nodo::SetDerecha(Nodo* derecha) {
     this->derecha = derecha;
 }
 
-Nodo Nodo::GetIzquierda() const {
+Nodo* Nodo::GetIzquierda() const {
     return izquierda;
 }
 
-void Nodo::SetIzquierda(Nodo izquierda) {
+void Nodo::SetIzquierda(Nodo* izquierda) {
     this->izquierda = izquierda;
 }
 
-Nodo Nodo::GetNe() const {
+Nodo* Nodo::GetNe() const {
     return ne;
 }
 
-void Nodo::SetNe(Nodo ne) {
+void Nodo::SetNe(Nodo* ne) {
     this->ne = ne;
 }
 
-Nodo Nodo::GetNo() const {
+Nodo* Nodo::GetNo() const {
     return no;
 }
 
-void Nodo::SetNo(Nodo no) {
+void Nodo::SetNo(Nodo* no) {
     this->no = no;
 }
 
@@ -86,19 +90,19 @@ void Nodo::SetPosicionY(int posicionY) {
     this->posicionY = posicionY;
 }
 
-Nodo Nodo::GetSe() const {
+Nodo* Nodo::GetSe() const {
     return se;
 }
 
-void Nodo::SetSe(Nodo se) {
+void Nodo::SetSe(Nodo* se) {
     this->se = se;
 }
 
-Nodo Nodo::GetSo() const {
+Nodo* Nodo::GetSo() const {
     return so;
 }
 
-void Nodo::SetSo(Nodo so) {
+void Nodo::SetSo(Nodo* so) {
     this->so = so;
 }
 
