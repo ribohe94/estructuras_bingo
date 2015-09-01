@@ -23,7 +23,7 @@ public:
     void mostrarLista();
     void generarBingo();
     void agregarNumero(Nodo* nuevoNodo);
-    Nodo obtenerPosicion(int, int);
+    Nodo* obtenerPosicion(int, int);
     
     //Atributos
     static const int TAMANO_BINGO = 5;

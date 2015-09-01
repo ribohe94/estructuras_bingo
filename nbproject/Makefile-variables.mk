@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=bingo
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/bingo
+CND_ARTIFACT_NAME_Debug=estructuras_bingo
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/estructuras_bingo
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=bingo.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/bingo.tar
+CND_PACKAGE_NAME_Debug=estructurasbingo.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/estructurasbingo.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=bingo
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/bingo
+CND_ARTIFACT_NAME_Release=estructuras_bingo
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/estructuras_bingo
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=bingo.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/bingo.tar
+CND_PACKAGE_NAME_Release=estructurasbingo.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/estructurasbingo.tar
 #
 # include compiler specific variables
 #

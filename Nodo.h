@@ -8,6 +8,7 @@
 #define	NODO_H
 
 #include <iostream>
+#include<cstdlib>
 
 using namespace std;
 
