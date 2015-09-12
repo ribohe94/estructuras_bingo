@@ -164,6 +164,8 @@ int Lista::fichasFormaC() {
 int Lista::fichasFormaX() {
     if (fichasDiagonalX() != 0 && fichas2DaDiagonalX() != 0)
         return 1200;
+    else
+        return 0;
 }
 
 int Lista::fichasFormaU() {
