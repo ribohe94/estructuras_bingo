@@ -24,6 +24,10 @@ public:
     void generarBingo();
     void agregarNumero(Nodo* nuevoNodo);
     Nodo* obtenerPosicion(int, int);
+    int fichasVerticalesX();
+    int fichasHorizontalesX();
+    int fichasDiagonalX();
+    int fichas2DaDiagonalX();
     
     //Atributos
     static const int TAMANO_BINGO = 5;

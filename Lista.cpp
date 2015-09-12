@@ -43,13 +43,12 @@ void Lista::generarBingo() {
     while (aux) {
         aux->SetArriba(obtenerPosicion(aux->GetPosicionX(), aux->GetPosicionY() - 1));
         aux->SetNe(obtenerPosicion(aux->GetPosicionX() + 1, aux->GetPosicionY() - 1));
-//        aux->SetDerecha(obtenerPosicion(aux->GetPosicionX() + 1, aux->GetPosicionY()));
         aux->SetSe(obtenerPosicion(aux->GetPosicionX() + 1, aux->GetPosicionY() + 1));
         aux->SetAbajo(obtenerPosicion(aux->GetPosicionX(), aux->GetPosicionY() + 1));
         aux->SetSo(obtenerPosicion(aux->GetPosicionX() - 1, aux->GetPosicionY() + 1));
         aux->SetIzquierda(obtenerPosicion(aux->GetPosicionX() - 1, aux->GetPosicionY()));
         aux->SetNo(obtenerPosicion(aux->GetPosicionX() - 1, aux->GetPosicionY() - 1));
-        aux=aux->GetDerecha();
+        aux = aux->GetDerecha();
     }
 }
 
@@ -86,3 +85,64 @@ Nodo* Lista::obtenerPosicion(int x, int y) {
     }
     return NULL;
 }
+
+int Lista::fichasVerticalesX() {
+    bool flag;
+    int fichas = 0;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        flag = true;
+        for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
+            if (obtenerPosicion(i, j)->GetValor() != "X") {
+                flag = false;
+            }
+        }
+        if (flag)
+            fichas += 400;
+    }
+    return fichas;
+}
+
+int Lista::fichasHorizontalesX() {
+    bool flag;
+    int fichas = 0;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        flag = true;
+        for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
+            if (obtenerPosicion(j, i)->GetValor() != "X") {
+                flag = false;
+            }
+        }
+        if (flag)
+            fichas += 400;
+    }
+    return fichas;
+}
+
+int Lista::fichasDiagonalX() {
+    bool flag;
+    int fichas = 0;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        flag = true;
+        if (obtenerPosicion(i, i)->GetValor() != "X") {
+            flag = false;
+        }
+        if (flag)
+            fichas += 800;
+    }
+    return fichas;
+}
+
+int Lista::fichas2DaDiagonalX() {
+    bool flag;
+    int fichas = 0;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        flag = true;
+        if (obtenerPosicion(i, Lista::TAMANO_BINGO - i)->GetValor() != "X") {
+            flag = false;
+        }
+        if (flag)
+            fichas += 800;
+    }
+    return fichas;
+}
+
