@@ -28,6 +28,11 @@ public:
     int fichasHorizontalesX();
     int fichasDiagonalX();
     int fichas2DaDiagonalX();
+    int fichasFormaC();
+    int fichasFormaX();
+    int fichasFormaU();
+    int fichasFormaO();
+    int BingoCompleto();
     
     //Atributos
     static const int TAMANO_BINGO = 5;

@@ -146,3 +146,68 @@ int Lista::fichas2DaDiagonalX() {
     return fichas;
 }
 
+int Lista::fichasFormaC() {
+    bool flag = true;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        if ((obtenerPosicion(0, i)->GetValor() != "X") ||
+                (obtenerPosicion(i, 0)->GetValor() != "X") ||
+                (obtenerPosicion(4, i)->GetValor() != "X")) {
+            flag = false;
+        }
+    }
+    if (flag)
+        return 1000;
+    else
+        return 0;
+}
+
+int Lista::fichasFormaX() {
+    if (fichasDiagonalX() != 0 && fichas2DaDiagonalX() != 0)
+        return 1200;
+}
+
+int Lista::fichasFormaU() {
+    bool flag = true;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        if ((obtenerPosicion(i, 0)->GetValor() != "X") ||
+                (obtenerPosicion(4, i)->GetValor() != "X") ||
+                (obtenerPosicion(i, 4)->GetValor() != "X")) {
+            flag = false;
+        }
+    }
+    if (flag)
+        return 1500;
+    else
+        return 0;
+}
+
+int Lista::fichasFormaO() {
+    bool flag = true;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        if ((obtenerPosicion(0, 1)->GetValor() != "X") ||
+                (obtenerPosicion(i, 0)->GetValor() != "X") ||
+                (obtenerPosicion(4, i)->GetValor() != "X") ||
+                (obtenerPosicion(i, 4)->GetValor() != "X")) {
+            flag = false;
+        }
+    }
+    if (flag)
+        return 2000;
+    else
+        return 0;
+}
+
+int Lista::BingoCompleto() {
+    bool flag = true;
+    for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
+            if (obtenerPosicion(i, j)->GetValor() != "X") {
+                flag = false;
+            }
+        }
+    }
+    if (flag)
+        return 10000;
+    else
+        return 0;
+}
