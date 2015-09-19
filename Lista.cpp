@@ -67,8 +67,12 @@ void Lista::mostrarLista() {
             if (i % 5 == 0) {
                 cout << endl;
             }
-            cout << " - " << aux->GetPosicionX() << ", " << aux->GetPosicionY() << " - ";
-            //            cout << aux->GetValor() << "  ";
+            //            cout << " - " << aux->GetPosicionX() << ", " << aux->GetPosicionY() << " - ";
+            if (aux->GetValor() == 0) {
+                cout << "X  ";
+            } else {
+                cout << aux->GetValor() << "  ";
+            }
             aux = aux->GetDerecha();
             i++;
         }
@@ -92,7 +96,7 @@ int Lista::fichasVerticalesX() {
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
         flag = true;
         for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
-            if (obtenerPosicion(i, j)->GetValor() != "X") {
+            if (obtenerPosicion(i, j)->GetValor() != 0) {
                 flag = false;
             }
         }
@@ -108,7 +112,7 @@ int Lista::fichasHorizontalesX() {
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
         flag = true;
         for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
-            if (obtenerPosicion(j, i)->GetValor() != "X") {
+            if (obtenerPosicion(j, i)->GetValor() != 0) {
                 flag = false;
             }
         }
@@ -123,7 +127,7 @@ int Lista::fichasDiagonalX() {
     int fichas = 0;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
         flag = true;
-        if (obtenerPosicion(i, i)->GetValor() != "X") {
+        if (obtenerPosicion(i, i)->GetValor() != 0) {
             flag = false;
         }
         if (flag)
@@ -137,7 +141,7 @@ int Lista::fichas2DaDiagonalX() {
     int fichas = 0;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
         flag = true;
-        if (obtenerPosicion(i, Lista::TAMANO_BINGO - i)->GetValor() != "X") {
+        if (obtenerPosicion(i, Lista::TAMANO_BINGO - i)->GetValor() != 0) {
             flag = false;
         }
         if (flag)
@@ -149,9 +153,9 @@ int Lista::fichas2DaDiagonalX() {
 int Lista::fichasFormaC() {
     bool flag = true;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
-        if ((obtenerPosicion(0, i)->GetValor() != "X") ||
-                (obtenerPosicion(i, 0)->GetValor() != "X") ||
-                (obtenerPosicion(4, i)->GetValor() != "X")) {
+        if ((obtenerPosicion(0, i)->GetValor() != 0) ||
+                (obtenerPosicion(i, 0)->GetValor() != 0) ||
+                (obtenerPosicion(4, i)->GetValor() != 0)) {
             flag = false;
         }
     }
@@ -171,9 +175,9 @@ int Lista::fichasFormaX() {
 int Lista::fichasFormaU() {
     bool flag = true;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
-        if ((obtenerPosicion(i, 0)->GetValor() != "X") ||
-                (obtenerPosicion(4, i)->GetValor() != "X") ||
-                (obtenerPosicion(i, 4)->GetValor() != "X")) {
+        if ((obtenerPosicion(i, 0)->GetValor() != 0) ||
+                (obtenerPosicion(4, i)->GetValor() != 0) ||
+                (obtenerPosicion(i, 4)->GetValor() != 0)) {
             flag = false;
         }
     }
@@ -186,10 +190,10 @@ int Lista::fichasFormaU() {
 int Lista::fichasFormaO() {
     bool flag = true;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
-        if ((obtenerPosicion(0, 1)->GetValor() != "X") ||
-                (obtenerPosicion(i, 0)->GetValor() != "X") ||
-                (obtenerPosicion(4, i)->GetValor() != "X") ||
-                (obtenerPosicion(i, 4)->GetValor() != "X")) {
+        if ((obtenerPosicion(0, 1)->GetValor() != 0) ||
+                (obtenerPosicion(i, 0)->GetValor() != 0) ||
+                (obtenerPosicion(4, i)->GetValor() != 0) ||
+                (obtenerPosicion(i, 4)->GetValor() != 0)) {
             flag = false;
         }
     }
@@ -203,7 +207,7 @@ int Lista::BingoCompleto() {
     bool flag = true;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
         for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
-            if (obtenerPosicion(i, j)->GetValor() != "X") {
+            if (obtenerPosicion(i, j)->GetValor() != 0) {
                 flag = false;
             }
         }

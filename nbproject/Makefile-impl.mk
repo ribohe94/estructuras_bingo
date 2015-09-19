@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=estructuras_bingo
+PROJECTNAME=Bingo
 
 # Active Configuration
 DEFAULTCONF=Debug

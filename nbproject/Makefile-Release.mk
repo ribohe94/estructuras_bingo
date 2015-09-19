@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Jugador.o \
 	${OBJECTDIR}/Lista.o \
 	${OBJECTDIR}/Nodo.o \
 	${OBJECTDIR}/main.o
@@ -58,11 +59,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/estructuras_bingo.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bingo.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/estructuras_bingo.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bingo.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/estructuras_bingo ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bingo ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Jugador.o: Jugador.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Jugador.o Jugador.cpp
 
 ${OBJECTDIR}/Lista.o: Lista.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -85,7 +91,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/estructuras_bingo.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bingo.exe
 
 # Subprojects
 .clean-subprojects:
