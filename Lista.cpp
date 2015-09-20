@@ -8,7 +8,7 @@
 #include "Lista.h"
 
 Lista::Lista() {
-
+    generarBingo();
 }
 
 Lista::Lista(const Lista& orig) {
@@ -33,9 +33,46 @@ void Lista::agregarNumero(Nodo* nuevo) {
 }
 
 void Lista::generarBingo() {
+    std::vector<int>array1_15;
+    std::vector<int>array16_30;
+    std::vector<int>array31_45;
+    std::vector<int>array46_60;
+    std::vector<int>array61_75;
+
+    //    int array1_15[15];
+    //    int array16_30[15];
+    //    int array31_45[15];
+    //    int array46_60[15];
+    //    int array61_75[15];
+
+    for (int i = 1; i < 16; i++) {
+        array1_15.push_back(i);
+        array16_30.push_back(i + 15);
+        array31_45.push_back(i + 30);
+        array46_60.push_back(i + 45);
+        array61_75.push_back(i + 60);
+    }
+
+    //    for (int i = 1; i < 16; i++) {
+    //        array1_15[i - 1] = i;
+    //        array16_30[i - 1] = i + 15;
+    //        array31_45[i - 1] = i + 30;
+    //        array46_60[i - 1] = i + 45;
+    //        array61_75[i - 1] = i + 60;
+    //    }
+
+    std::random_shuffle(array1_15.begin(), array1_15.end());
+    std::random_shuffle(array16_30.begin(), array16_30.end());
+    std::random_shuffle(array31_45.begin(), array31_45.end());
+    std::random_shuffle(array46_60.begin(), array46_60.end());
+    std::random_shuffle(array61_75.begin(), array61_75.end());
+
+    std::vector<int>::iterator it;
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
+        it = array1_15.begin();
         for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
-            agregarNumero(new Nodo(j, i, 1 + (rand() % 15)));
+            agregarNumero(new Nodo(j, i, *it));
+            *it++;
         }
     }
 

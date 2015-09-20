@@ -14,9 +14,18 @@ public:
     Jugador(int cantidadCartones);
     Jugador(const Jugador& orig);
     virtual ~Jugador();
+    //Sets & Gets
+    Lista** GetCartones() const;
+    void SetCartones(Lista** cartones);
+    int GetFichas() const;
+    void SetFichas(int fichas);
+    // Metodos
+    void mostrarCartones();
 private:
     int fichas;
-    
+    int cantidad;
+    string nombre;
+    Lista** cartones;
 };
 
 #endif	/* JUGADOR_H */

@@ -8,7 +8,12 @@
 #define	NODO_H
 
 #include <iostream>
-#include<cstdlib>
+#include <cstdlib>
+#include <algorithm>
+#include <algorithm>    // std::random_shuffle
+#include <vector>       // std::vector
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
 
 using namespace std;
 
@@ -56,7 +61,7 @@ private:
     Nodo* ne;
     Nodo* so;
     Nodo* se;
-    
+
 };
 
 #endif	/* NODO_H */
