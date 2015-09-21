@@ -23,6 +23,7 @@ public:
     Nodo(Nodo* abajo, Nodo* arriba, Nodo* derecha, Nodo* izquierda, Nodo* ne, Nodo* no, int posicionX, int posicionY, Nodo* se, Nodo* so, int valor);
     Nodo(const Nodo& orig);
     Nodo(int posicionX, int posicionY, int valor);
+    Nodo(int posicionX, int posicionY);
     virtual ~Nodo();
     //Sets & Gets
     Nodo* GetAbajo() const;

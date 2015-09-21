@@ -8,6 +8,7 @@
 #include "Lista.h"
 
 Lista::Lista() {
+    primero = ultimo = NULL;
     generarBingo();
 }
 
@@ -39,12 +40,6 @@ void Lista::generarBingo() {
     std::vector<int>array46_60;
     std::vector<int>array61_75;
 
-    //    int array1_15[15];
-    //    int array16_30[15];
-    //    int array31_45[15];
-    //    int array46_60[15];
-    //    int array61_75[15];
-
     for (int i = 1; i < 16; i++) {
         array1_15.push_back(i);
         array16_30.push_back(i + 15);
@@ -53,27 +48,48 @@ void Lista::generarBingo() {
         array61_75.push_back(i + 60);
     }
 
-    //    for (int i = 1; i < 16; i++) {
-    //        array1_15[i - 1] = i;
-    //        array16_30[i - 1] = i + 15;
-    //        array31_45[i - 1] = i + 30;
-    //        array46_60[i - 1] = i + 45;
-    //        array61_75[i - 1] = i + 60;
-    //    }
-
     std::random_shuffle(array1_15.begin(), array1_15.end());
     std::random_shuffle(array16_30.begin(), array16_30.end());
     std::random_shuffle(array31_45.begin(), array31_45.end());
     std::random_shuffle(array46_60.begin(), array46_60.end());
     std::random_shuffle(array61_75.begin(), array61_75.end());
 
-    std::vector<int>::iterator it;
+    std::vector<int>::iterator it1;
+    std::vector<int>::iterator it2;
+    std::vector<int>::iterator it3;
+    std::vector<int>::iterator it4;
+    std::vector<int>::iterator it5;
+
+    it1 = array1_15.begin();
+    it2 = array16_30.begin();
+    it3 = array31_45.begin();
+    it4 = array46_60.begin();
+    it5 = array61_75.begin();
+
+    //    for (it = array1_15.begin(); it < array1_15.end(); it++) {
+    //        cout << *it << endl;
+    //    }
+
     for (int i = 0; i < Lista::TAMANO_BINGO; i++) {
-        it = array1_15.begin();
         for (int j = 0; j < Lista::TAMANO_BINGO; j++) {
-            agregarNumero(new Nodo(j, i, *it));
-            *it++;
+            if (j == 0)
+                agregarNumero(new Nodo(i, j, *it1));
+            if (j == 1)
+                agregarNumero(new Nodo(i, j, *it2));
+            if (j == 2)
+                agregarNumero(new Nodo(i, j, *it3));
+            if (j == 3)
+                agregarNumero(new Nodo(i, j, *it4));
+            if (j == 4)
+                agregarNumero(new Nodo(i, j, *it5));
+
         }
+
+        it1++;
+        it2++;
+        it3++;
+        it4++;
+        it5++;
     }
 
     Nodo* aux = primero;

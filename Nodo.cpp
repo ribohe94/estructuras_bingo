@@ -18,6 +18,10 @@ Nodo::Nodo(int posicionX, int posicionY, int valor) :
 posicionX(posicionX), posicionY(posicionY), valor(valor) {
 }
 
+Nodo::Nodo(int posicionX, int posicionY) :
+posicionX(posicionX), posicionY(posicionY){
+}
+
 Nodo::Nodo(const Nodo& orig) {
 }
 
