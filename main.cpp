@@ -17,7 +17,8 @@ int main(int argc, char** argv) {
 
     Jugador* j1 = new Jugador(4);
     j1->mostrarCartones();
-    
+//    int* n = (int*) 5;
+//    printf("%p\n", (void*)n);
     
     
     return 0;

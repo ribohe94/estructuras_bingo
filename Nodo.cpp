@@ -7,109 +7,137 @@
 
 #include "Nodo.h"
 
-Nodo::Nodo() {
+
+template <class T>
+Nodo<T>::Nodo() {
 }
 
-Nodo::Nodo(Nodo* abajo, Nodo* arriba, Nodo* derecha, Nodo* izquierda, Nodo* ne, Nodo* no, int posicionX, int posicionY, Nodo* se, Nodo* so, int valor) :
-abajo(abajo), arriba(arriba), derecha(derecha), izquierda(izquierda), ne(ne), no(no), posicionX(posicionX), posicionY(posicionY), se(se), so(so), valor(valor) {
-}
+//template <class T>
+//Nodo<T>::Nodo(Nodo<T>* abajo, Nodo<T>* arriba, Nodo<T>* derecha, Nodo<T>* izquierda, Nodo<T>* ne, Nodo<T>* no, int posicionX, int posicionY, Nodo<T>* se, Nodo<T>* so, int valor) :
+//abajo(abajo), arriba(arriba), derecha(derecha), izquierda(izquierda), ne(ne), no(no), posicionX(posicionX), posicionY(posicionY), se(se), so(so), valor(valor) {
+//}
 
-Nodo::Nodo(int posicionX, int posicionY, int valor) :
+template <class T>
+Nodo<T>::Nodo(int posicionX, int posicionY, int valor) :
 posicionX(posicionX), posicionY(posicionY), valor(valor) {
 }
 
-Nodo::Nodo(const Nodo& orig) {
+template <class T>
+Nodo<T>::Nodo(const Nodo& orig) {
 }
 
-Nodo::~Nodo() {
+template <class T>
+Nodo<T>::~Nodo() {
 }
 
 //Sets & Gets
 
-Nodo* Nodo::GetAbajo() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetAbajo() const {
     return abajo;
 }
 
-void Nodo::SetAbajo(Nodo* abajo) {
+template <class T>
+void Nodo<T>::SetAbajo(Nodo<T>* abajo) {
     this->abajo = abajo;
 }
 
-Nodo* Nodo::GetArriba() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetArriba() const {
     return arriba;
 }
 
-void Nodo::SetArriba(Nodo* arriba) {
+template <class T>
+void Nodo<T>::SetArriba(Nodo<T>* arriba) {
     this->arriba = arriba;
 }
 
-Nodo* Nodo::GetDerecha() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetDerecha() const {
     return derecha;
 }
 
-void Nodo::SetDerecha(Nodo* derecha) {
+template <class T>
+void Nodo<T>::SetDerecha(Nodo<T>* derecha) {
     this->derecha = derecha;
 }
 
-Nodo* Nodo::GetIzquierda() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetIzquierda() const {
     return izquierda;
 }
 
-void Nodo::SetIzquierda(Nodo* izquierda) {
+template <class T>
+void Nodo<T>::SetIzquierda(Nodo<T>* izquierda) {
     this->izquierda = izquierda;
 }
 
-Nodo* Nodo::GetNe() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetNe() const {
     return ne;
 }
 
-void Nodo::SetNe(Nodo* ne) {
+template <class T>
+void Nodo<T>::SetNe(Nodo<T>* ne) {
     this->ne = ne;
 }
 
-Nodo* Nodo::GetNo() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetNo() const {
     return no;
 }
 
-void Nodo::SetNo(Nodo* no) {
+template <class T>
+void Nodo<T>::SetNo(Nodo<T>* no) {
     this->no = no;
 }
 
-int Nodo::GetPosicionX() const {
+template <class T>
+int Nodo<T>::GetPosicionX() const {
     return posicionX;
 }
 
-void Nodo::SetPosicionX(int posicionX) {
+template <class T>
+void Nodo<T>::SetPosicionX(int posicionX) {
     this->posicionX = posicionX;
 }
 
-int Nodo::GetPosicionY() const {
+template <class T>
+int Nodo<T>::GetPosicionY() const {
     return posicionY;
 }
 
-void Nodo::SetPosicionY(int posicionY) {
+template <class T>
+void Nodo<T>::SetPosicionY(int posicionY) {
     this->posicionY = posicionY;
 }
 
-Nodo* Nodo::GetSe() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetSe() const {
     return se;
 }
 
-void Nodo::SetSe(Nodo* se) {
+template <class T>
+void Nodo<T>::SetSe(Nodo<T>* se) {
     this->se = se;
 }
 
-Nodo* Nodo::GetSo() const {
+template <class T>
+Nodo<T>* Nodo<T>::GetSo() const {
     return so;
 }
 
-void Nodo::SetSo(Nodo* so) {
+template <class T>
+void Nodo<T>::SetSo(Nodo<T>* so) {
     this->so = so;
 }
 
-int Nodo::GetValor() const {
+template <class T>
+T Nodo<T>::GetValor() const {
     return valor;
 }
 
-void Nodo::SetValor(int valor) {
+template <class T>
+void Nodo<T>::SetValor(T valor) {
     this->valor = valor;
 }

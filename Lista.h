@@ -10,6 +10,7 @@
 
 #include "Nodo.h"
 
+template <class T>
 class Lista {
 public:
     
@@ -22,8 +23,8 @@ public:
     bool estaVacio();
     void mostrarLista();
     void generarBingo();
-    void agregarNumero(Nodo* nuevoNodo);
-    Nodo* obtenerPosicion(int, int);
+    void agregarNumero(Nodo<T>* nuevoNodo);
+    Nodo<T>* obtenerPosicion(int, int);
     int fichasVerticalesX();
     int fichasHorizontalesX();
     int fichasDiagonalX();
@@ -37,10 +38,11 @@ public:
     //Atributos
     static const int TAMANO_BINGO = 5;
 private:
-    Nodo* primero;
-    Nodo* ultimo;
+    Nodo<T>* primero;
+    Nodo<T>* ultimo;
 };
 
+template class Lista<int>;
 #endif	/* LISTA_H */
 //Prueba
 

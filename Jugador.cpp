@@ -10,9 +10,9 @@
 Jugador::Jugador(int n) {
     fichas = 2000;
     cantidad = n;
-    cartones = new Lista*[n];
+    cartones = new Lista<int>*[n];
     for (int i = 0; i < n; i++) {
-        cartones[i] = new Lista();
+        cartones[i] = new Lista<int>();
     }
 }
 
@@ -24,11 +24,11 @@ Jugador::~Jugador() {
 
 //Sets & Gets
 
-Lista** Jugador::GetCartones() const {
+Lista<int>** Jugador::GetCartones() const {
     return cartones;
 }
 
-void Jugador::SetCartones(Lista** cartones) {
+void Jugador::SetCartones(Lista<int>** cartones) {
     this->cartones = cartones;
 }
 

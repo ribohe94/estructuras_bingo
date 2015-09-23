@@ -14,55 +14,60 @@
 #include <vector>       // std::vector
 #include <ctime>        // std::time
 #include <cstdlib>      // std::rand, std::srand
+#include <stdio.h>
 
 using namespace std;
 
+
+template <class T>
 class Nodo {
 public:
     Nodo();
-    Nodo(Nodo* abajo, Nodo* arriba, Nodo* derecha, Nodo* izquierda, Nodo* ne, Nodo* no, int posicionX, int posicionY, Nodo* se, Nodo* so, int valor);
+//    Nodo(Nodo<T>* abajo, Nodo<T>* arriba, Nodo<T>* derecha, Nodo<T>* izquierda, Nodo<T>* ne, Nodo<T>* no, int posicionX, int posicionY, Nodo<T>* se, Nodo<T>* so, int valor);
     Nodo(const Nodo& orig);
     Nodo(int posicionX, int posicionY, int valor);
     virtual ~Nodo();
     //Sets & Gets
-    Nodo* GetAbajo() const;
-    void SetAbajo(Nodo* abajo);
-    Nodo* GetArriba() const;
-    void SetArriba(Nodo* arriba);
-    Nodo* GetDerecha() const;
-    void SetDerecha(Nodo* derecha);
-    Nodo* GetIzquierda() const;
-    void SetIzquierda(Nodo* izquierda);
-    Nodo* GetNe() const;
-    void SetNe(Nodo* ne);
-    Nodo* GetNo() const;
-    void SetNo(Nodo* no);
+    Nodo<T>* GetAbajo() const;
+    void SetAbajo(Nodo<T>* abajo);
+    Nodo<T>* GetArriba() const;
+    void SetArriba(Nodo<T>* arriba);
+    Nodo<T>* GetDerecha() const;
+    void SetDerecha(Nodo<T>* derecha);
+    Nodo<T>* GetIzquierda() const;
+    void SetIzquierda(Nodo<T>* izquierda);
+    Nodo<T>* GetNe() const;
+    void SetNe(Nodo<T>* ne);
+    Nodo<T>* GetNo() const;
+    void SetNo(Nodo<T>* no);
     int GetPosicionX() const;
     void SetPosicionX(int posicionX);
     int GetPosicionY() const;
     void SetPosicionY(int posicionY);
-    Nodo* GetSe() const;
-    void SetSe(Nodo* se);
-    Nodo* GetSo() const;
-    void SetSo(Nodo* so);
-    int GetValor() const;
-    void SetValor(int valor);
+    Nodo<T>* GetSe() const;
+    void SetSe(Nodo<T>* se);
+    Nodo<T>* GetSo() const;
+    void SetSo(Nodo<T>* so);
+    T GetValor() const;
+    void SetValor(T valor);
 
 private:
 
-    int valor;
+    T valor;
     int posicionX;
     int posicionY;
-    Nodo* izquierda;
-    Nodo* derecha;
-    Nodo* arriba;
-    Nodo* abajo;
-    Nodo* no;
-    Nodo* ne;
-    Nodo* so;
-    Nodo* se;
+    Nodo<T>* izquierda;
+    Nodo<T>* derecha;
+    Nodo<T>* arriba;
+    Nodo<T>* abajo;
+    Nodo<T>* no;
+    Nodo<T>* ne;
+    Nodo<T>* so;
+    Nodo<T>* se;
 
 };
+
+template class Nodo<int>;
 
 #endif	/* NODO_H */
 

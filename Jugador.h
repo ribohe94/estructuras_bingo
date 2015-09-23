@@ -15,8 +15,8 @@ public:
     Jugador(const Jugador& orig);
     virtual ~Jugador();
     //Sets & Gets
-    Lista** GetCartones() const;
-    void SetCartones(Lista** cartones);
+    Lista<int>** GetCartones() const;
+    void SetCartones(Lista<int>** cartones);
     int GetFichas() const;
     void SetFichas(int fichas);
     // Metodos
@@ -27,7 +27,7 @@ private:
     string nombre;
     string nick;
     int edad;
-    Lista** cartones;
+    Lista<int>** cartones;
 };
 
 #endif	/* JUGADOR_H */
