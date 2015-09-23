@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>ContenedorJugadores.h</itemPath>
+      <itemPath>GestorJuego.h</itemPath>
+      <itemPath>Interfaz.h</itemPath>
       <itemPath>Jugador.h</itemPath>
       <itemPath>Lista.h</itemPath>
       <itemPath>Nodo.h</itemPath>
@@ -15,6 +18,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>ContenedorJugadores.cpp</itemPath>
+      <itemPath>GestorJuego.cpp</itemPath>
+      <itemPath>Interfaz.cpp</itemPath>
       <itemPath>Jugador.cpp</itemPath>
       <itemPath>Lista.cpp</itemPath>
       <itemPath>Nodo.cpp</itemPath>
@@ -42,6 +48,18 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="ContenedorJugadores.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContenedorJugadores.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GestorJuego.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GestorJuego.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Interfaz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Interfaz.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Jugador.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Jugador.h" ex="false" tool="3" flavor2="0">
@@ -77,6 +95,18 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="ContenedorJugadores.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContenedorJugadores.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GestorJuego.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GestorJuego.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Interfaz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Interfaz.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Jugador.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Jugador.h" ex="false" tool="3" flavor2="0">

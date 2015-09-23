@@ -35,6 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/ContenedorJugadores.o \
+	${OBJECTDIR}/GestorJuego.o \
+	${OBJECTDIR}/Interfaz.o \
 	${OBJECTDIR}/Jugador.o \
 	${OBJECTDIR}/Lista.o \
 	${OBJECTDIR}/Nodo.o \
@@ -64,6 +67,21 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/estructuras_bingo.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/estructuras_bingo ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/ContenedorJugadores.o: ContenedorJugadores.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContenedorJugadores.o ContenedorJugadores.cpp
+
+${OBJECTDIR}/GestorJuego.o: GestorJuego.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GestorJuego.o GestorJuego.cpp
+
+${OBJECTDIR}/Interfaz.o: Interfaz.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Interfaz.o Interfaz.cpp
 
 ${OBJECTDIR}/Jugador.o: Jugador.cpp 
 	${MKDIR} -p ${OBJECTDIR}

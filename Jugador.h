@@ -25,6 +25,8 @@ private:
     int fichas;
     int cantidad;
     string nombre;
+    string nick;
+    int edad;
     Lista** cartones;
 };
 
