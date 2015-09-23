@@ -26,6 +26,7 @@ public:
 //    Nodo(Nodo<T>* abajo, Nodo<T>* arriba, Nodo<T>* derecha, Nodo<T>* izquierda, Nodo<T>* ne, Nodo<T>* no, int posicionX, int posicionY, Nodo<T>* se, Nodo<T>* so, int valor);
     Nodo(const Nodo& orig);
     Nodo(int posicionX, int posicionY, int valor);
+    Nodo(int posicionX, int posicionY);
     virtual ~Nodo();
     //Sets & Gets
     Nodo<T>* GetAbajo() const;
