@@ -4,30 +4,41 @@
  *
  * Created on 19 de septiembre de 2015, 14:12
  */
-
 #ifndef JUGADOR_H
 #define	JUGADOR_H
-#include "Lista.h"
+
+#include <iostream>
+#include <sstream>
+
+using namespace std;
 
 class Jugador {
 public:
-    Jugador(int cantidadCartones);
+    Jugador();
     Jugador(const Jugador& orig);
+    Jugador(int edad, int fichas, string nick, string nombre, string pass);
     virtual ~Jugador();
     //Sets & Gets
-    Lista<int>** GetCartones() const;
-    void SetCartones(Lista<int>** cartones);
+    int GetEdad() const;
+    void SetEdad(int edad);
+    string GetNick() const;
+    void SetNick(string nick);
+    string GetNombre() const;
+    void SetNombre(string nombre);
     int GetFichas() const;
     void SetFichas(int fichas);
-    // Metodos
-    void mostrarCartones();
+    string GetPass() const;
+    void SetPass(string pass);
+    
+    string toString();
+    
 private:
-    int fichas;
-    int cantidad;
     string nombre;
     string nick;
     int edad;
-    Lista<int>** cartones;
+    int fichas;
+    string pass;
+    
 };
 
 #endif	/* JUGADOR_H */

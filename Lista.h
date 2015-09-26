@@ -4,13 +4,11 @@
  *
  * Created on 29 August 2015, 23:31
  */
-
 #ifndef LISTA_H
 #define	LISTA_H
 
 #include "Nodo.h"
 
-template <class T>
 class Lista {
 public:
     
@@ -23,8 +21,8 @@ public:
     bool estaVacio();
     void mostrarLista();
     void generarBingo();
-    void agregarNumero(Nodo<T>* nuevoNodo);
-    Nodo<T>* obtenerPosicion(int, int);
+    void agregarNumero(Nodo* nuevoNodo);
+    Nodo* obtenerPosicion(int, int);
     int fichasVerticalesX();
     int fichasHorizontalesX();
     int fichasDiagonalX();
@@ -34,15 +32,14 @@ public:
     int fichasFormaU();
     int fichasFormaO();
     int BingoCompleto();
+    void PonerX(int x, int y);
     
     //Atributos
     static const int TAMANO_BINGO = 5;
 private:
-    Nodo<T>* primero;
-    Nodo<T>* ultimo;
+    Nodo* primero;
+    Nodo* ultimo;
 };
 
-template class Lista<int>;
 #endif	/* LISTA_H */
-//Prueba
 

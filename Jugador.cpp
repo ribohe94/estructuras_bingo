@@ -7,29 +7,42 @@
 
 #include "Jugador.h"
 
-Jugador::Jugador(int n) {
-    fichas = 2000;
-    cantidad = n;
-    cartones = new Lista<int>*[n];
-    for (int i = 0; i < n; i++) {
-        cartones[i] = new Lista<int>();
-    }
+Jugador::Jugador() {
+
 }
 
 Jugador::Jugador(const Jugador& orig) {
 }
 
+Jugador::Jugador(int edad, int fichas, string nick, string nombre, string pass) :
+edad(edad), fichas(2000), nick(nick), nombre(nombre), pass(pass) {
+}
+
 Jugador::~Jugador() {
 }
 
-//Sets & Gets
-
-Lista<int>** Jugador::GetCartones() const {
-    return cartones;
+int Jugador::GetEdad() const {
+    return edad;
 }
 
-void Jugador::SetCartones(Lista<int>** cartones) {
-    this->cartones = cartones;
+void Jugador::SetEdad(int edad) {
+    this->edad = edad;
+}
+
+string Jugador::GetNick() const {
+    return nick;
+}
+
+void Jugador::SetNick(string nick) {
+    this->nick = nick;
+}
+
+string Jugador::GetNombre() const {
+    return nombre;
+}
+
+void Jugador::SetNombre(string nombre) {
+    this->nombre = nombre;
 }
 
 int Jugador::GetFichas() const {
@@ -40,12 +53,19 @@ void Jugador::SetFichas(int fichas) {
     this->fichas = fichas;
 }
 
-//Metodos
+string Jugador::GetPass() const {
+    return pass;
+}
 
-void Jugador::mostrarCartones() {
-    for (int i = 0; i < cantidad; i++) {
-        cout << endl;
-        cartones[i]->mostrarLista();
-        cout << endl;
-    }
+void Jugador::SetPass(string pass) {
+    this->pass = pass;
+}
+
+string Jugador::toString() {
+    stringstream s;
+    s << "Nombre: " << nombre << endl
+            << "Nick: " << nick << endl
+            << "Edad: " << edad << endl
+            << "Fichas" << fichas <<endl;
+    return s.str();
 }

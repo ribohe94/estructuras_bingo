@@ -7,6 +7,8 @@
 
 #ifndef INTERFAZ_H
 #define	INTERFAZ_H
+class GestorJuego;
+#include "GestorJuego.h"
 
 class Interfaz {
 public:
@@ -16,11 +18,19 @@ public:
     //Metodos
     void init();
     void registroJugador();
-    void tipoJuego();
-    void cantidadCartones();
+    void iniciarSesion();
+    void seleccioneJuego();
+    void iniciarJuegoHorizontal();
+    void iniciarJuegoDiagonal();
+    void iniciarJuegoC();
+    void iniciarJuegoX();
+    void iniciarJuegoU();
+    void iniciarJuegoO();
+    void iniciarJuegoBingo();
+    void mostrarJugadores();
     
 private:
-
+    GestorJuego* gestor;
 };
 
 #endif	/* INTERFAZ_H */
